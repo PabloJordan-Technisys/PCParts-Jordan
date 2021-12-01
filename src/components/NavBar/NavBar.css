@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: 700;
+}
+
+.tituloNav {
+  text-transform: uppercase;
+}
+
+.nav {
+  width: 40%;
+}
+.ulNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.linav:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  text-shadow: 2px 2px gray;
+}

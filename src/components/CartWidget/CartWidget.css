@@ -1,0 +1,7 @@
+.cartWidget {
+  font-size: 30px;
+}
+.cartWidget:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
