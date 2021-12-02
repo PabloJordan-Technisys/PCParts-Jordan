@@ -3,13 +3,15 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { NavBar } from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemCount } from "./components/ItemCount/ItemCount";
+import { FetchApi } from "./ApiCall/FetchApi";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+
       <ItemListContainer greeting="Este es el greeting dentro del itemlistcontainer" />
-      <ItemCount stock="10" />
+      <ItemCount stock="8" />
       <Footer />
     </div>
   );
