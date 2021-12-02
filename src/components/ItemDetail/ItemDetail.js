@@ -1,14 +1,15 @@
 import React from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 
-export const Item = ({ item }) => {
+export const ItemDetail = ({ item }) => {
   return (
-    <div className="col-3 m-2">
+    <div className="container m-2 my-3">
       <img src={item.img} alt={item.nombre} />
       <h3>{item.nombre}</h3>
       <p>{item.precio}</p>
       <p>{item.desc}</p>
-      <button className="btn btn-primary">Ver mas</button>
+
+      <ItemCount stock="10" />
     </div>
   );
 };

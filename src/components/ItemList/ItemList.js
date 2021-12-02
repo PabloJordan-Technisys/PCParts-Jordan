@@ -7,7 +7,7 @@ export const ItemList = ({ items }) => {
       <h2>Productos</h2>
       <hr />
       {items.map((el) => (
-        <Item item={el} />
+        <Item key={el.id} item={el} />
       ))}
     </div>
   );
