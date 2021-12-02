@@ -12,8 +12,9 @@
   text-transform: uppercase;
 }
 
-.nav {
+.navNavbar {
   width: 40%;
+  justify-content: space-between;
 }
 .ulNav {
   display: flex;
@@ -25,5 +26,5 @@
 .linav:hover {
   transform: scale(1.05);
   transition: 0.5s;
-  text-shadow: 2px 2px gray;
+  text-shadow: 2px 2px black;
 }
