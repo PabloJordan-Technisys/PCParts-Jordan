@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
 
-      <ItemListContainer greeting="Este es el greeting dentro del itemlistcontainer" />
+      <ItemListContainer />
       <ItemCount stock="8" />
       <Footer />
     </div>
