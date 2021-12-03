@@ -28,3 +28,7 @@
   transition: 0.5s;
   text-shadow: 2px 2px black;
 }
+
+.linav {
+  list-style: none;
+}

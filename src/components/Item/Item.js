@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ItemCount } from "../ItemCount/ItemCount";
 
 export const Item = ({ item }) => {
@@ -8,7 +9,10 @@ export const Item = ({ item }) => {
       <h3>{item.nombre}</h3>
       <p>{item.precio}</p>
       <p>{item.desc}</p>
-      <button className="btn btn-primary">Ver mas</button>
+      <p>Categoria: {item.category}</p>
+      <Link to={`/detail/${item.id}`} className="btn btn-primary">
+        Ver mas
+      </Link>
     </div>
   );
 };
