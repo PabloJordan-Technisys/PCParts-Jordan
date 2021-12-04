@@ -5,21 +5,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartView } from "./components/CartView/CartView";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
-        <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
-        <Route path="/cart" element={<CartView />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            path="/categoria/:categoryId"
+            element={<ItemListContainer />}
+          />
+          <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<CartView />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

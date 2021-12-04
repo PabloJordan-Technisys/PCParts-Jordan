@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { pedirDatos, pedirItem } from "../helpers/pedirDatos";
+import { pedirItem } from "../helpers/pedirDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 
 export const ItemDetailContainer = () => {
@@ -15,7 +15,7 @@ export const ItemDetailContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [itemId]);
   return (
     <div>{loading ? <h2>Cargando...</h2> : <ItemDetail item={item} />}</div>
   );

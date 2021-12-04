@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ItemCount } from "../ItemCount/ItemCount";
 
 export const Item = ({ item }) => {
   return (

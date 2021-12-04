@@ -6,6 +6,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "Impresora economica y efectiva",
     category: "impresora",
+    stock: 10,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "El mejor set de VR",
     category: "vr",
+    stock: 7,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "Juga o mina al maximo",
     category: "vga",
+    stock: 5,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 8,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 14,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 6,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 3,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 2,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 11,
   },
   {
     id: 10,
@@ -78,5 +87,6 @@ export const stock = [
     img: "https://via.placeholder.com/200",
     desc: "La impresora mas inteligente",
     category: "impresora",
+    stock: 20,
   },
 ];

@@ -1,8 +1,4 @@
-import { useCounter } from "../../Hooks/useCounter";
-
-export const ItemCount = ({ stock = 5, inicial = 1 }) => {
-  const { counter, increment, decrement } = useCounter(inicial, stock, 0);
-
+export const ItemCount = ({ increment, decrement, onAdd, counter }) => {
   return (
     <div className="m-4 container">
       <button onClick={decrement} className="btn btn-outline-primary">
@@ -14,7 +10,9 @@ export const ItemCount = ({ stock = 5, inicial = 1 }) => {
       </button>
 
       <div className="my-2">
-        <button className="btn btn-success">Agregar al carrito</button>
+        <button className="btn btn-success" onClick={onAdd}>
+          Agregar al carrito
+        </button>
       </div>
     </div>
   );

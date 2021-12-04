@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 export const NavBar = () => {
   return (
-    <header className="navbar">
+    <header className="navbar px-5">
       <Link to="/">
         <h1 className="tituloNav">TechnoArg</h1>
       </Link>
