@@ -1,0 +1,9 @@
+.container {
+  min-height: 450px;
+  padding: 20px;
+}
+
+.imagen {
+  max-height: 160px;
+  max-width: 300px;
+}

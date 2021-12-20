@@ -1,27 +1,43 @@
-import { Link } from "react-router-dom";
-import { CartWidget } from "../CartWidget/CartWidget";
 import "./NavBar.css";
+
+import { CartWidget } from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <header className="navbar px-5">
-      <Link to="/">
+      <Link style={{ textDecoration: "none", color: "white" }} to="/">
         <h1 className="tituloNav">TechnoArg</h1>
       </Link>
       <nav className="navNavbar">
         <ul className="ulNav">
           <li className="linav">
-            <Link to="/categoria/impresora">Impresoras 3D</Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/categoria/impresora"
+            >
+              Impresoras 3D
+            </Link>
           </li>
           <li className="linav">
-            <Link to="/categoria/vga">Placas de Video</Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/categoria/vga"
+            >
+              Placas de Video
+            </Link>
           </li>
           <li className="linav">
-            <Link to="/categoria/vr">Set VR</Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/categoria/vr"
+            >
+              Set VR
+            </Link>
           </li>
         </ul>
       </nav>
-      <Link to="/cart">
+      <Link style={{ textDecoration: "none", color: "white" }} to="/cart">
         <CartWidget />
       </Link>
     </header>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { db } from "../../Firebase/config";
+import { collection, getDocs, query, where } from "firebase/firestore/lite";
+
 import { ItemList } from "../ItemList/ItemList";
 import { Loader } from "../Loader/Loader";
-import { collection, getDocs, query, where } from "firebase/firestore/lite";
+import { db } from "../../Firebase/config";
+import { useParams } from "react-router";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
@@ -27,7 +28,7 @@ export const ItemListContainer = ({ greeting }) => {
             ...doc.data(),
           };
         });
-        console.log(productos);
+
         setItems(productos);
       })
       .finally(() => {
@@ -35,5 +36,9 @@ export const ItemListContainer = ({ greeting }) => {
       });
   }, [categoryId]);
 
-  return <div>{loading ? <Loader /> : <ItemList items={items} />}</div>;
+  return (
+    <div className="container">
+      {loading ? <Loader /> : <ItemList items={items} />}
+    </div>
+  );
 };

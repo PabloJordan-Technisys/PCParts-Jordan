@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router";
+
 import { CartContext } from "../../context/CartContext";
-import { useCounter } from "../../Hooks/useCounter";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useCounter } from "../../Hooks/useCounter";
+import { useNavigate } from "react-router";
 
 export const ItemDetail = ({ item }) => {
   const { agregarAlCarrito, isInCart } = useContext(CartContext);
@@ -24,11 +25,13 @@ export const ItemDetail = ({ item }) => {
       });
   };
   return (
-    <div className="container m-2 my-3">
+    <div className="container card m-2 my-3">
       <img src={item.img} alt={item.nombre} />
-      <h3>{item.nombre}</h3>
-      <p>{item.precio}</p>
-      <p>{item.desc}</p>
+      <div className="container my-1">
+        <h3 className="d-flex justify-content-center">{item.nombre}</h3>
+        <p className="d-flex justify-content-center">${item.precio}</p>
+        <p className="d-flex justify-content-center">{item.desc}</p>
+      </div>
 
       {!isInCart(item.id) ? (
         <ItemCount

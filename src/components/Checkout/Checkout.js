@@ -52,7 +52,7 @@ export const Checkout = () => {
   };
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 card">
       {orderId ? (
         <>
           <h2>Gracias por su compra!!</h2>
@@ -91,7 +91,7 @@ export const Checkout = () => {
               values={values.tel}
               onChange={handleImputChange}
             />
-            <button type="submit" className="btn btn-success">
+            <button type="submit" className="btn btn-success my-2 mx-3">
               Enviar
             </button>
           </form>

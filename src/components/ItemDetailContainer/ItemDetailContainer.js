@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { db } from "../../Firebase/config";
 import { collection, doc, getDoc } from "firebase/firestore/lite";
 
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { Loader } from "../Loader/Loader";
+import { db } from "../../Firebase/config";
+import { useParams } from "react-router";
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -24,5 +24,9 @@ export const ItemDetailContainer = () => {
         setLoading(false);
       });
   }, [itemId]);
-  return <div>{loading ? <Loader /> : <ItemDetail item={item} />}</div>;
+  return (
+    <div className="container">
+      {loading ? <Loader /> : <ItemDetail item={item} />}
+    </div>
+  );
 };
